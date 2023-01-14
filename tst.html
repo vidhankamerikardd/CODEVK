@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="d()">check</button>
+
+  <script>
+
+
+
+  
+    let searchArray = ['D', 'B', 'C'];
+for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (searchArray.some(x => key.includes("C"))) {
+        console.log(key + " contains one of the elements in the array");
+    }
+  }
+
+  </script>
+</body>
+</html>
