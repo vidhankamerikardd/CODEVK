@@ -18,8 +18,9 @@
     .bottom {
         border-right: 3px solid rgb(255, 255, 255);
         border-bottom: 3px solid rgb(255, 255, 255);
-        height: 900px;
+       
         box-shadow: 3px 10px 10px rgb(158, 157, 157);
+       
        
     }
     a {
@@ -28,15 +29,17 @@
         text-decoration: none;
     
 
+
+
     }
 
     .co {
-      width: 400px; position: fixed; z-index: 1000000000000000;
+      top: 0%; z-index: 1000000000000000;
     }
     .footer {
         position: absolute;
-       top: 800px;
-       left: 150px;
+        top: 0%;
+     
     }
     .img1 {
         size: 10px;
@@ -46,45 +49,36 @@
         color:rgb(0, 0, 0);
     }
 
-    .home:hover {
-background-color: rgb(189, 189, 189);
-color: aliceblue;
+    .opd {
+      height: 50px;
     }
+
     
     .home {
-        height: 50px;
-       padding-top: 10px;
+      right: 1200px; position: absolute; top: 28%;
     }
 
+    .pod {
+      left: 5px; position: absolute;top: 6%;
+    }
     .about{
-        height: 50px;
-       padding-top: 10px;
+      right: 1115px; position: absolute;top: 28%;
     }
 
-    .about:hover {
-background-color: rgb(189, 189, 189);
-color: aliceblue;
-    }
 
     .product{
-        height: 50px;
-       padding-top: 10px;
+      right: 1005px; position: absolute;top: 28%;
     }
 
-    .product:hover {
-background-color: rgb(189, 189, 189);
-color: aliceblue;
+    .certificate {
+      right: 890px; position: absolute;top: 28%;
     }
 
     .contact{
-        height: 50px;
-       padding-top: 10px;
+      right: 800px; position: absolute;top: 28%;
     }
 
-    .contact:hover {
-background-color: rgb(189, 189, 189);
-color: aliceblue;
-    }
+
 
 
 
@@ -147,14 +141,41 @@ color: aliceblue;
 
 .card1 .card-content p {
   margin: 0;
-  color: #444;
+  color: rgb(182, 178, 178);
   font-size: 14px;
+}
+
+
+.div1ab {
+background-color: rgb(231, 229, 229);
+height: 500px;
+width: 500px;
+position: absolute;
+left:100px;
+padding: 20px;
+}
+
+.div2ab {
+
+width: 20%;
+height: 20%;
+position: absolute;
+left: 600px;
+
+
 }
 
 .ab {
   position: absolute; top: 88%; left: 1090px; text-decoration: underline;
 }
 
+
+.abtxts {
+  position: absolute;
+  left: 750px;
+  text-decoration: dashed;
+ 
+}
 
 .container2 {
     display: flex;
@@ -172,9 +193,24 @@ color: aliceblue;
     gap: 50px;
 }
 
+.cert {
+
+  width: 2500px;
+  height: 700px;
+  position: absolute;
+  top: 170%;
+  background-image: url('cerback.png');
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 2500px;
+}
+
+
+
 .le {
   position: absolute;
-  left: 1070px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; top: 5%; text-decoration:underline;
+  left: 900px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; top: 10%; text-decoration:underline;
 }
 .abcd {
   width: 1200px; top: 5%; position: absolute; left: 500px;
@@ -189,7 +225,7 @@ color: aliceblue;
 }
 
 .abc {
-  background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); position: absolute; top: 180%; width: 1900px; height: 500px; z-index: -111111111111111;
+  background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); position: absolute; top: 320%; width: 1900px; height: 500px; z-index: -111111111111111;
 }
   .imga {
     background-image: url('tst.jfif') ;padding: 20px; position: absolute; top: 100%; left: 1200px; box-shadow: 3px 3px 10px rgb(143, 143, 143); border: 1px solid rgb(255, 255, 255); width: 600px; height: 400px; border-radius: 0%; border-image-outset: 5%; object-fit: cover; background-repeat:repeat;
@@ -197,10 +233,120 @@ color: aliceblue;
 
 
 
+  * {box-sizing:border-box}
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(202, 202, 202);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #a0a0a0;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.txto {
+  position: absolute;
+  left: 850px;
+  top: 5%;
+  color: white;
+}
+
+
+
+
+
+
+
+
+.sl {
+  position: absolute;
+  top: 50%;
+  z-index: 10000000;
+}
 
 body {
-  font-family: quicksand; overflow-x: hidden;
+  font-family: quicksand; overflow-x: hidden; margin: 0%;
 }
 
 .abcdef {
@@ -497,197 +643,497 @@ body::-webkit-scrollbar-thumb {
  }
 }
 
+.logo {
+  width: 480px;
+  position: absolute;
+  top: -1100%;
+  left: -1100%;
+}
 
+.opd {
+  height: 100px;
+}
 
 
 </style>
 </head>
 <body>
-    <div class="co">
-        
-      
-        <div class="bottom">
-            <br>
-            
-            <h3 style="position: absolute; left: 65px;" class="t">Bansal Enterprises</h3>
-            
-            <br>
-            <br>
-            <hr style="height: 2px; background-color: rgb(0, 0, 0);">
-            <br>
-            
-           <br>
-          <div class="home">
-            <ul>
-               
-            <a href="" id="home" onclick="to()" class="w3-bar-item w3-button o"><img class="op" src="https://img.icons8.com/external-inkubators-glyph-inkubators/22/null/external-home-ecommerce-user-interface-inkubators-glyph-inkubators.png"/>     Home</a>
-        </div>
-        </ul>
-        <br>
-        <section class="about" >
-        <ul>
-           
-            <a href="#about" class="w3-bar-item w3-button o"><img class="op"  src="https://img.icons8.com/material-outlined/22/null/info--v1.png"/>      About</a>
-        </section>
-        </ul>
-        <br>
-        <div class="product">
-        <ul>
-            
-            <a href="file:///C:/Users/Nived/OneDrive/Documents/catalouge%20website/products1.html" class="w3-bar-item w3-button o"><img class="op"  src="https://img.icons8.com/material-outlined/22/null/package.png"/>      Product</a>
-        </div>
-        </ul>
-        <br>
-        <div class="contact">
-        <ul>
-            <a href="#contact" onclick="dow()" class="w3-bar-item w3-button o"><img class="op"  src="https://img.icons8.com/windows/22/null/contacts.png"/>        Contact</a>
-        </div>
-        </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light opd">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <a class="navbar-brand pod" href="#"><img src="Logo.png" alt="" class="logo"></a>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link home" href="#">Home</a>
+        <a class="nav-item nav-link about" href="#about">About</a>
+        <a class="nav-item nav-link product" href="">Products</a>
+        <a class="nav-item nav-link certificate" href="#">Certicates</a>
+        <a class="nav-item nav-link contact" href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-        
-                    </div>
-                    </div>
-                    
-      
-                  </div>
 
-<div class="maind">
-                  <div data-aos="fade-right" class="le">
-
-                    <h2 data-aos="fade-right" style="font-family: quicksand;" class="p
-                    
-                    ">Best Sellers</h2>
                   
-                  </div>
                   
+                  <br>
+                  <br>
+                  <br>
 
-<div class="container2" data-aos="fade-right">
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+
+<!-- Slideshow container -->
+<div class="slideshow-container xsa">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade xs">
+ 
+    <img src="Image2.png" style="width:70%">
+
+  </div>
+
+  <div class="mySlides fade xs">
+   
+    <img src="Image3.png" style="width:70%">
+
+  </div>
+
+  <div class="mySlides fade xs">
+ 
+    <img src="Image1.png" style="width:70%">
+   
+  </div>
+
   
-                    <div class="card">
-                     
-                        <img src="imgtst.webp" alt="Card image">
-                        <div class="card-content">
-                          <h3 class="ti">Card title</h3>
-                          <p class="ti">Card content</p>
-                        </div>
-                      </div>
+  <div class="mySlides fade xs">
+    
+    <img src="Image4.png" style="width:70%">
 
-               
-                      <div class="card">
-                        <img src="imgtst.webp" alt="Card image">
-                        <div class="card-content">
-                          <h3 class="ti">Card title</h3>
-                          <p class="ti">Card content</p>
-                        </div>
-                      </div>
-                      
-          
-                      <div class="card">
-                        <img src="imgtst.webp" alt="Card image">
-                        <div class="card-content">
-                          <h3 class="ti">Card title</h3>
-                          <p class="ti">Card content</p>
-                        </div>
-                      </div>
+  </div>
 
+  <div class="mySlides fade xs">
+   
+    <img src="Image5.png" style="width:70%">
+ 
+  </div>
+
+
+  <style>
+   .xs {
+    width: 2800px;
+    
+   }
+
+   .xsa {
+    position: absolute;
+    top: 10%;
+   }
+  </style>
+
+ 
+  <!-- Next and previous buttons -->
+ 
 </div>
-                      
-                   
+<br>
 
-
-
-
-                    
-
-<div class="container1" data-aos="fade-right">
-
-                        <div class="card1">
-                            <img src="imgtst.webp" alt="Card image">
-                            <div class="card-content">
-                              <h3 class="ti">Card title</h3>
-                              <p class="ti">Card content</p>
-                            </div>
-                          </div>
-    
-    
-                          <div class="card1">
-                            <img src="imgtst.webp" alt="Card image">
-                            <div class="card-content">
-                              <h3 class="ti">Card title</h3>
-                              <p class="ti">Card content</p>
-                            </div>
-                          </div>
-
-
-                          <div class="card1">
-                            <img src="imgtst.webp" alt="Card image">
-                            <div class="card-content">
-                              <h3 class="ti">Card title</h3>
-                              <p class="ti">Card content</p>
-                            </div>
-                          </div>
-    
-    
-                     
-                          
-                        </div>
-</div>
-
-
+<br>
+<br>
                         <!--About-->
+ <br>
+                        <br>
+                         <br>
+                        <br>
+                        <div class="aboutw">
+                     <u>  <h2 class="abtxts">About</h2></u> 
+                        <br>
+                        <br>
+                         <br>
+                        <br>
+                    <div class="div1ab">
+                      <h5 >I (BANSAL ENTERPRISES) am supplier of industries and goverment sector.  I am deal in all type electric goods. for example mcbs, switches, wire and cables,lighting, contactor, relay, proximity senser switch, limit switch, foot switch, push button station, signal and tower light, smps, capacitor,  junction box, timer, meters, cable tie, gland, fehrule,panel asseseries, timer, plug and socket, cable tray, sleeving, bulb, tube lights, fittings and fans etc.
+          
+                I am supply in Kurlon Ltd., Jk Tyre & Industries Ltd., Jamna Auto Industries Ltd., Marvel Vinyls Ltd, Montage Enterprises Pvt Ltd, Crompton Greaves Ltd., Surya Roshni Ltd (High Mast Division), Farseen Rubber Industries Ltd., Map Auto Ind. Ltd.  and Srf Ltd. etc.
 
-                      
-                        <h2 data-aos="fade-right" class="ab" id="about">About Us</h2> 
+               I am authorised dealer in Jaibalaji controls gears pvt. ltd., Finolex Cables Ltd., FTC Ltd., Indo Asian, Axiom Controls ltd and bentec electricals, electronics pvt. ltd. & havells etc.
+             
+              I am deal in Schneider, Siemens, L&T, ABB, Selec, Autonics, Omron, Epcos, Polycab, HMI, Commet, Bajaj, Rishab and Meco.</h5>
 
-                        <div data-aos="fade-right" class="ap">
-
-
-                          <h5 class="txt">I am the owner of Bansal enterprise and we are wholeseller. Our shop aims to sell electronics products and we have made this website to provide our products catalog to our dear customers and provide them the information of our bestseller product. <br>Our aim to make this website is that from this website customer can see our products and contact us if they like the products and you can find my contact no. and social media links from contact section. I hope that you like our products.</h5>
-
-
-                        </div>
-
-
-                        <div data-aos="fade-right" class="imga">
-
-
-                          
-
-
-                        </div>
-
-                      
+              <div class="tx">
+                <button class="btnab">More</button>
+              </div>
                     </div>
+              
+
+                  <style>
+                    .aboutw {
+                      position: absolute;
+                      top: 80%;
+                      left: 10%;
+                    }
+                  </style>
+ <div class="div2ab">
+    <video controls class="vid">
+      <source src="vid.mp4" type="video/mp4">
+    </video>
+
+    <style>
+      .vid {
+        width: 890px;
+       
+      }
+
+      .div1ab {
+        margin: 0%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      .tx {
+        content: "";
+        background: linear-gradient(to bottom, transparent, rgb(197, 196, 196));
+        height: 90px;
+        width: 500px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+      }
+
+      .btnab {
+        position: absolute;
+        top: 60%;
+        left: 28%;
+        border-radius: 10px;
+        width: 200px;
+        height: 30px;
+        border: none;
+        background:rgb(241, 238, 238);
+      }
+    </style>
+ </div>
+</div>
+ <br>
+ <br>
+ <br>
+
+ <div class="cert">
+<div>
+  <h2 class="txto">Our Best Sellers</h2>
+  <div class="prodi">
+    <!--Card-1-->
+    <div class="card re" style="width: 18rem;">
+      <img src="https://2.imimg.com/data2/AX/GB/MY-3126565/onload-changeover-switch-250x250.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <hr>
+    <b>    <p class="card-text">ONLOAD CHARGEOVER SWITCH 4 POLE 1000-1250A, 415V, 50HZ</p></b>
+      </div>
+    </div>
+
+
+    <div class="card red" style="width: 18rem;">
+      <img src="https://th.bing.com/th/id/OIP.dY8S3pmsivdumWOtafVgCQHaHi?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <hr>
+       <b> <p class="card-text">LOAD BREAK SWITCH 4 POLE 1000-1250A, 415V, 50HZ</p></b>
+      </div>
+    </div>
+
+
+    <div class="card redr" style="width: 18rem;">
+      <img src="https://th.bing.com/th/id/OIP.XXiqNAly1SbEei0RV9cveAHaJQ?pid=ImgDet&rs=1" class="card-img-top" alt="..." style="width: 230px; position:absolute; left: 5%;">
+      <div class="card-body">
+        <hr style="width: 230px; position:absolute; top: 67%;">
+    <b><p class="card-text" style="width: 230px; position:absolute; top: 75%; font-size: 15.8px;">BY PASS SWITCH 4 POLE 100A, 415V, 50HZ</p></b>    
+      </div>
+    </div>
+
+
+    <div class="card redrm" style="width: 18rem;">
+      <img src="https://th.bing.com/th/id/OIP.z3lzCLZsPUGwhPvX2I-EEQHaHC?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <hr>
+       <b><p class="card-text">SWITCH FUSE DISCONNECTOR 32AMP</p></b> 
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+  
+
+
+
+
+
+</div>
+</div>
+ 
+
+<style>
+
+.re {
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    height: 450px;
+}
+
+.red {
+  
+  position: absolute;
+    left: 27%;
+    top: 5%;
+    height: 450px;
+}
+
+.redr {
+  
+  position: absolute;
+    left: 52%;
+    top: 5%;
+    height: 450px;
+}
+
+.redrm {
+  
+  position: absolute;
+    left: 77%;
+    top: 5%;
+    height: 450px;
+}
+.prodi {
+    width: 1500px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    border-radius: 1%;
+
+
+}
+
+
+
+  .certi2 {
+    width: 100px;
+  }
+
+    .btna1 {
+    position: absolute;
+    top: 50%;
+    left: 1400px;
+  }
+
+  .imas2 {
+    position: absolute;
+    left: 10px;
+    width: 450px;
+  }
+
+  .imas1 {
+    position: absolute;
+    left: 900px;
+    width: 450px;
+  }
+
+
+</style>
+ 
+
+
                         <!--Footer-->
 
                         <!--Contact no-9993267886
 Facebook id-Vivek Bansal   
 gmail-vnbansalenterprises2010@gmail.com-->
 
-                <div data-aos="fade-right" class="abc">
-                  <hr data-aos="fade-right" class="abcd">
-                  <a data-aos="fade-right" href="#" class="abcde"><img class="po" src="https://img.icons8.com/ios-filled/25/null/facebook-new.png"/>  Facebook</a>
+<div class="foote">
+  <div class="foot1">
+      <h2 class="consm">Contact</h2>
+      <hr class="g">
+      <a class="dcs"><img src="https://img.icons8.com/color/28/null/facebook-new.png"/> Facebook - Vivek Bansal</a><br>
+      <a class="dms"><img src="https://img.icons8.com/color/28/null/gmail-new.png"/> Gmail - vnbansalenterprises2010@gmail.com</a><br>
+      <a class="dn"><img src="https://img.icons8.com/plasticine/30/null/ringer-volume.png" class="hs"/> Contact No. - 999327886</a>
+  </div>
 
-                  <a data-aos="fade-right" href="#" class="abcdef"><img class="po" src="https://img.icons8.com/fluency-systems-regular/25/null/gmail.png"/> Gmail</a>       
 
-                  <a data-aos="fade-right" href="#" class="abcdefg"><img class="po" src="https://img.icons8.com/ios-glyphs/25/null/call-female.png"/> Contact Number</a>
 
-                  <h5 data-aos="fade-right" class="abcdefgh">- vnbansalenterprises2010@gmail.com</h5>
-                  
-               <a data-aos="fade-right" class="abcdefghi" href="https://www.facebook.com/vicky.agarwal.7127?mibextid=ZbWKwL">  <h5 class="abcdo">- Vivek Bansal</h5>  </a> 
 
-                  <h5 data-aos="fade-right" class="abcdefghij">- 9993267886</h5>
+ <form action="index.php" method="post" class="forma">
+    <h2 class="fts">Quick Contact</h2>
+    <input type="text" placeholder="Your Name" class="ain">
+    <input type="email" placeholder="Your Email" class="bin1">
+    <input type="text" placeholder="Your Problem" class="bin2">
+    <button class="fbtn">Submit</button>
+    <br>
+ </form>
+</div>
 
-                  <h3 data-aos="fade-right" class="abcdefghijk" id="contact">Contact</h3>
-                </div>
+             
 
-                <li>
-                  <ul>
-                    <ul></ul>
-                  </ul>
-                </li>
+<style>
+.forma {
+  position: absolute;
+  left: 1000px;
+}
 
-                        
+.fbtn {
+  position: absolute;
+  top: 900%;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  
+}
+
+.fts {
+  top: -2%;
+  position: absolute;
+  white-space: nowrap;
+  color: white;
+}
+
+.ain {
+  top: 300%;
+  position: absolute;
+  width: 500px;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.ain:focus {
+    outline: none !important;
+    border-width: 1px !important;
+    border-bottom: 1px white solid;
+    width: 550px;
+    animation-name: size;
+    animation-duration: 1s;
+}
+
+@keyframes size {
+  from {width: 500px}
+  to {width: 550px}
+}
+
+.bin1 {
+  top: 500%;
+  position: absolute;
+  width: 500px;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.bin1:focus {
+    outline: none !important;
+    border-width: 1px !important;
+    border-bottom: 1px white solid;
+    width: 550px;
+    animation-name: size;
+    animation-duration: 1s;
+}
+.bin2 {
+  top: 700%;
+  position: absolute;
+  color: white;
+  width: 500px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+}
+
+.bin2:focus {
+    outline: none !important;
+    border-width: 1px !important;
+    border-bottom: 1px white solid;
+    width: 550px;
+    animation-name: size;
+    animation-duration: 1s;
+}
+  .g {
+    position: absolute;
+      top: 7%;
+      color: white;
+     background-color: white;
+  }
+  .consm {
+    position: absolute;
+      top: 5%;
+      left: 1%;
+      color: white;
+      text-decoration: dashed;
+  }
+    .foote {
+      position: absolute;
+      top: 250%;
+      background-color: #000;
+      width: 2500px;
+      height: 500px;
+    }
+
+    .dcs {
+      position: absolute;
+      top: 20%;
+      left: 3%;
+      color: white;
+    }
+
+    .dcs:hover {
+      position: absolute;
+      top: 20%;
+      left: 3%;
+      color: white;
+    }
+
+    .dms {
+      position: absolute;
+      top: 30%;
+      color: white;
+      left: 3%;
+    }
+
+    .dms:hover {
+      position: absolute;
+      top: 30%;
+      color: white;
+      left: 3%;
+    }
+    .dn {
+      position: absolute;
+      top: 40%;
+      left: 3%;
+      color: white;
+    }
+
+    .dn:hover {
+      position: absolute;
+      top: 40%;
+      left: 3%;
+      color: white;
+    }
+ 
+</style>
+
+
+<!--<img src="https://img.icons8.com/ios/50/null/place-marker--v1.png"/> (location)-->
+<!--<img src="https://img.icons8.com/ios/50/null/ringer-volume.png"/> (Contact)-->
+<!--<img src="https://img.icons8.com/color/48/null/facebook-new.png"/> (Facebook)-->
+<!--<img src="https://img.icons8.com/color/48/null/gmail-new.png"/> (Gmail)-->
+<div>
+  
+</div>
     </body>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -704,5 +1150,30 @@ gmail-vnbansalenterprises2010@gmail.com-->
 
           
               </script>
+
+
+              <script>
+                let slideIndex = 0;
+
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+
+showSlides();
+
+              </script>
+
+
+
+
 </body>
 </html>
