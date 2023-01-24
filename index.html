@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style>
+
+ 
     .head {
         background-color: black;
         height: 0px;
@@ -51,6 +53,7 @@
 
     .opd {
       height: 50px;
+      
     }
 
     
@@ -371,6 +374,8 @@ body {
 .abcdefghijk {
   position: absolute; left: 600px; top: 0%;
 }
+
+
 @media screen and (min-width: 1270) {
 .about {
   font-size: 20px;
@@ -405,164 +410,10 @@ body {
 }
 
 @media screen and (max-width: 900px){
-.t {
-  visibility: hidden;
-}
-
-.o {
-  color: white;
-  
-}
-
-.p {
-  font-size: 60px;
-  white-space: nowrap;
-  left: 500px;
-}
-
-.card {
-  width: 350px;
-  
-}
-
-.card1 {
-  width: 350px;
-
-}
-
-.abc {
-  left: 100px;
-}
-
-.container2 {
-  left: 180px;
-  top: 25%;
-  
-}
-
-.container1 {
-  left: 180px;
-  top: 75%;
- 
-}
-
-.ap {
-  left: 200px;
-  width: 1000px;
-  top: 150%; 
-
-
-}
-
-.ab {
-  left: 550px;
-  top: 130%;
-  white-space: nowrap;
-  font-size: 60px;
-}
-
-.le {
-  left: 170px;
-}
-
-.co {
-  position: fixed;
-  width: 100px;
- 
-}
-
-.bottom {
-  position: fixed;
-  height: 1000px;
-  top: 20%;
-  width: 110px;
-}
-
-.op {
-width: 50px;
-}
-
-.abcd {
-  left: 170px;
- top: 140%;
- width: 1000px;
- 
-}
-
-.abcdefghijk {
-  left: 180px;
-  top: 130%;
-  font-size: 50px;
-}
-
-.abcde {
-  left: 160px;
-  top: 150%;
-  font-size: 35px;
-}
-
-.abcdef {
-  left: 165px;
-  top: 165%;
-  font-size: 35px;
-  
-}
-
-.abcdefg {
-  left: 160px;
-  top: 180%;
-  font-size: 35px;
-}
-
-.abcdefghi {
-  left: 380px;
-  top: 150%;
-  
-}
-
-.abcdefgh {
-  left: 320px;
-  top: 165%;
-  font-size: 40px;
-
-}
-
-.abcdefghij {
-  left: 490px;
-  top: 180%;
-  font-size: 35px;
-}
-
-body {
-  max-width: 200px;
-  
-}
-
-.imga {
-  left: 200px;
-  width: 50px;
-  height: 50px;
-  visibility: hidden;
-}
-
-
-.abcdo {
-  font-size: 40px;
-  
-
-}
-
-.maind {
-  left: 250px;
-}
-
-.txt {
-  font-size: 45px;
-}
-
-.po {
-  width: 50px;
-}
+  .foot3 {
+      top: 2200px;
+      position: absolute;
+    }
 
 }
 
@@ -657,37 +508,97 @@ body::-webkit-scrollbar-thumb {
 
 </style>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light opd">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<body onload="playVideo()">
+  <nav class="navbar navbar-light bg-light opd" role="navigation" id="nav">
+
+    <div class="opd1">
       <a class="navbar-brand pod" href="#"><img src="Logo.png" alt="" class="logo"></a>
-      <div class="navbar-nav">
-        <a class="nav-item nav-link home" href="#">Home</a>
-        <a class="nav-item nav-link about" href="#about">About</a>
-        <a class="nav-item nav-link product" href="">Products</a>
-        <a class="nav-item nav-link certificate" href="#">Certicates</a>
-        <a class="nav-item nav-link contact" href="#">Contact</a>
+      <div class="navbar-nav con">
+        <a class="home nav-item nav-link" href="#" id="home">Home</a>
+        <a class="nav-item nav-link about" href="#about" id="about">About</a>
+        <a class="nav-item nav-link product" href="" id="product">Products</a>
+        <a class="nav-item nav-link certificate" href="#" id="certificate">Certicates</a>
+        <a class="nav-item nav-link contact" href="#" id="contact">Contact</a>
       </div>
     </div>
   </nav>
 
 
-                  
-                  
-                  <br>
-                  <br>
-                  <br>
 
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
+<script>
+   let regexp = /android|iphone/i;
+   let details = navigator.userAgent;
+   let isMobileDevice = regexp.test(details);
+   if(isMobileDevice) {
+    let nav = document.getElementById('nav');
+    nav.className = "navbar navbar-light bg-light opd position-fixed";
+   }
+</script>
 
+              <style>
+                @media screen and (max-width:900px) {
+                    .opd {
+                      height: 90px;
+                      z-index: 50000;
+                      width: 2000px;
+                      display: block;
+                      top: 0px;
+                      position: fixed;
+                      background-color: #000;
+                    }
+
+                    .opd1 {
+                      background-color: #000;
+                      position: fixed;
+                    }
+
+                    .pod {
+                      display: none;
+                      visibility: hidden;
+                    }
+
+                    .toog {
+                      position: absolute;
+                      top: 5%;
+                      right: 10%;
+                    }
+                    .con {
+                      display:block;
+                      visibility: visible;
+                      color: black;
+                      top: 10%;
+                      left: 900px;
+                      z-index: 60000;
+                      font-size: 30px;
+                    }
+
+                    .home{
+                      position: absolute;
+                      left: 100px;
+                    }
+
+                    .product {
+                      position: absolute;
+                      left: 500px;
+                    }
+
+
+
+                   .about {
+                    position: absolute;
+                      left: 300px;
+                   }
+
+                   .contact {
+                    position: absolute;
+                      left: 700px;
+                   }
+
+                    
+
+                }
+              </style>    
+           
 <!-- Slideshow container -->
 <div class="slideshow-container xsa">
 
@@ -734,6 +645,12 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     top: 10%;
    }
+
+   @media screen and (max-width:900px){
+      .xs {
+        width: 2200px;
+      }
+   }
   </style>
 
  
@@ -756,7 +673,7 @@ body::-webkit-scrollbar-thumb {
                          <br>
                         <br>
                     <div class="div1ab">
-                      <h5 >I (BANSAL ENTERPRISES) am supplier of industries and goverment sector.  I am deal in all type electric goods. for example mcbs, switches, wire and cables,lighting, contactor, relay, proximity senser switch, limit switch, foot switch, push button station, signal and tower light, smps, capacitor,  junction box, timer, meters, cable tie, gland, fehrule,panel asseseries, timer, plug and socket, cable tray, sleeving, bulb, tube lights, fittings and fans etc.
+                      <h5 class="asa">I (BANSAL ENTERPRISES) am supplier of industries and goverment sector.  I am deal in all type electric goods. for example mcbs, switches, wire and cables,lighting, contactor, relay, proximity senser switch, limit switch, foot switch, push button station, signal and tower light, smps, capacitor,  junction box, timer, meters, cable tie, gland, fehrule,panel asseseries, timer, plug and socket, cable tray, sleeving, bulb, tube lights, fittings and fans etc.
           
                 I am supply in Kurlon Ltd., Jk Tyre & Industries Ltd., Jamna Auto Industries Ltd., Marvel Vinyls Ltd, Montage Enterprises Pvt Ltd, Crompton Greaves Ltd., Surya Roshni Ltd (High Mast Division), Farseen Rubber Industries Ltd., Map Auto Ind. Ltd.  and Srf Ltd. etc.
 
@@ -776,13 +693,45 @@ body::-webkit-scrollbar-thumb {
                       top: 80%;
                       left: 10%;
                     }
+
+    @media screen and (max-width:900px){
+        .aboutw {
+          top: 85%;
+          left: 2%;
+
+        }
+
+        .div1ab {
+          height: 490px;
+        }
+        
+        .asa {
+          font-size: 40px;
+        }
+        
+   }
                   </style>
  <div class="div2ab">
-    <video controls class="vid">
-      <source src="vid.mp4" type="video/mp4">
+    <video class="vid" controls autoplay>
+      <source src="vid.mp4" type="video/mp4" id="vid">
     </video>
 
+    <script>
+      function playVideo()
+{
+    document.getElementById("vid").play();
+}
+
+    </script>
     <style>
+      @media screen and (max-width: 900px) {
+        .div2ab {
+          width: 800px;
+          height: 490px;
+          overflow: hidden;
+        }
+      }
+
       .vid {
         width: 890px;
        
@@ -824,7 +773,8 @@ body::-webkit-scrollbar-thumb {
  <div class="cert">
 <div>
   <h2 class="txto">Our Best Sellers</h2>
-  <div class="prodi">
+  <div class="prodia1">
+  <div class="prodia">
     <!--Card-1-->
     <div class="card re" style="width: 18rem;">
       <img src="https://2.imimg.com/data2/AX/GB/MY-3126565/onload-changeover-switch-250x250.jpg" class="card-img-top" alt="...">
@@ -848,7 +798,7 @@ body::-webkit-scrollbar-thumb {
       <img src="https://th.bing.com/th/id/OIP.XXiqNAly1SbEei0RV9cveAHaJQ?pid=ImgDet&rs=1" class="card-img-top" alt="..." style="width: 230px; position:absolute; left: 5%;">
       <div class="card-body">
         <hr style="width: 230px; position:absolute; top: 67%;">
-    <b><p class="card-text" style="width: 230px; position:absolute; top: 75%; font-size: 15.8px;">BY PASS SWITCH 4 POLE 100A, 415V, 50HZ</p></b>    
+    <b><p class="card-text">BY PASS SWITCH 4 POLE 100A, 415V, 50HZ</p></b>    
       </div>
     </div>
 
@@ -861,7 +811,7 @@ body::-webkit-scrollbar-thumb {
       </div>
     </div>
   </div>
-
+</div>
   <br>
   <br>
   <br>
@@ -879,6 +829,27 @@ body::-webkit-scrollbar-thumb {
 
 <style>
 
+@media screen and (max-width: 900px) {
+  .cert {
+    top: 200%;
+    width: 1500px;
+  }
+  .txto {
+    font-size: 40px;
+    left: 45%;
+  }
+
+  .prodia1 {
+    position: absolute;
+    left: -200px;
+  }
+
+.card-text {
+  font-size: 20px;
+}
+
+
+}
 .re {
     position: absolute;
     left: 2%;
@@ -909,13 +880,14 @@ body::-webkit-scrollbar-thumb {
     top: 5%;
     height: 450px;
 }
-.prodi {
+.prodia {
+
     width: 1500px;
     height: 500px;
     background-color: rgb(255, 255, 255);
-    position: absolute;
-    top: 15%;
-    left: 7%;
+    position: relative;
+    top: 120px;
+    left: 250px;
     border-radius: 1%;
 
 
@@ -945,6 +917,9 @@ body::-webkit-scrollbar-thumb {
     width: 450px;
   }
 
+  .card-text {
+    width: 230px; position:absolute; top: 75%; font-size: 18px;
+  }
 
 </style>
  
@@ -955,14 +930,20 @@ body::-webkit-scrollbar-thumb {
                         <!--Contact no-9993267886
 Facebook id-Vivek Bansal   
 gmail-vnbansalenterprises2010@gmail.com-->
-
-<div class="foote">
+<footer class="foot4">
+<div class="foot3">
   <div class="foot1">
       <h2 class="consm">Contact</h2>
       <hr class="g">
-      <a class="dcs"><img src="https://img.icons8.com/color/28/null/facebook-new.png"/> Facebook - Vivek Bansal</a><br>
-      <a class="dms"><img src="https://img.icons8.com/color/28/null/gmail-new.png"/> Gmail - vnbansalenterprises2010@gmail.com</a><br>
+      <div class="facem">
+      <a class="dcs"><img src="https://img.icons8.com/color/28/null/facebook-new.png" class="face"/> Facebook - Vivek Bansal</a><br>
+    </div>
+    <div class="gmam">
+      <a class="dms"><img src="https://img.icons8.com/color/28/null/gmail-new.png" class="gma"/> Gmail - vnbansalenterprises2010@gmail.com</a><br>
+    </div>
+    <div class="contm">
       <a class="dn"><img src="https://img.icons8.com/plasticine/30/null/ringer-volume.png" class="hs"/> Contact No. - 999327886</a>
+      </div>
   </div>
 
 
@@ -979,8 +960,95 @@ gmail-vnbansalenterprises2010@gmail.com-->
 </div>
 
              
-
+</footer>
 <style>
+
+  @media only screen and (max-width:900px){
+    .foot3 {
+      top: 2200px;
+      position: relative;
+    }
+
+
+    .consm {
+      font-size: 50px;
+    }
+
+   .dcs {
+    font-size: 40px;
+
+   }
+
+   .dms {
+    font-size: 40px;
+    
+   }
+
+   .dn {
+    font-size: 40px;
+    
+   }
+
+   .face {
+    width: 60px;
+   }
+
+   .gma {
+    width: 60px;
+   }
+
+   .hs {
+    width: 60px;
+   }
+
+   .fts {
+    font-size: 45px;
+   }
+
+   .ain {
+    font-size: 30px;
+   }
+
+   .bin1 {
+    font-size: 30px;
+   }
+
+   .bin2 {
+    font-size: 30px;
+   }
+
+   .fbtn {
+    font-size: 25px;
+
+   }
+  }
+
+
+@media only screen and (max-width: 415px){
+  .xs {
+    width: 2400px;
+  }
+
+  .cert {
+    top: 200%;
+    width: 2400px;
+  }
+
+  .prodia1 {
+    left: -170px;
+  }
+
+  .txto {
+    left: 680px;
+  }
+
+  .foot4 {
+    top: 400px;
+    position: relative;
+  }
+
+
+}
 .forma {
   position: absolute;
   left: 1000px;
@@ -994,6 +1062,7 @@ gmail-vnbansalenterprises2010@gmail.com-->
   height: 35px;
   
 }
+
 
 .fts {
   top: -2%;
@@ -1075,9 +1144,9 @@ gmail-vnbansalenterprises2010@gmail.com-->
       color: white;
       text-decoration: dashed;
   }
-    .foote {
+    .foot3 {
       position: absolute;
-      top: 250%;
+      top: 2500px;
       background-color: #000;
       width: 2500px;
       height: 500px;
@@ -1169,6 +1238,9 @@ function showSlides() {
 }
 
 showSlides();
+
+
+
 
               </script>
 
